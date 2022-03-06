@@ -1,0 +1,29 @@
+{
+  "name": "applicationtestl",
+  "version": "1.0.0",
+  "description": "Prueba tecnica para el ingreso a la vacante FullStack en Caranty",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch * index.js",
+    "start": "NODE_ENV=production node index"
+  },
+  "keywords": [
+    "caranty",
+    "fullstack",
+    "vacante",
+    "prueba",
+    "tecnica"
+  ],
+  "author": "DEV Osvaldo Daniel Amador Salinas",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "mongodb": "^4.4.1"
+  }
+}
