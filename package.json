@@ -17,13 +17,42 @@
   "author": "DEV Osvaldo Daniel Amador Salinas",
   "license": "ISC",
   "devDependencies": {
+    "chalk": "^4.1.0",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
-    "mongodb": "^4.4.1"
+    "mongodb": "^4.4.1",
+    "passport": "^0.5.2",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "routes",
+      "services",
+      "lib",
+      "utils"
+    ]
   }
 }
