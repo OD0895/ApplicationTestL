@@ -8,12 +8,13 @@ class test5 {
         let dataSearch = [...new Set(data)];
         
         const result = dataSearch.map(character => {
-            let regexp = new RegExp(`[${character}]`, 'gi');
+            let regexp = new RegExp(`[${character}]`, 'g');
             let coincidence = data.match(regexp).length;
-            return { character, coincidence}
+            let result = `${character} = ${coincidence}`;
+            return result;
         });
         
-        return result;
+        return result.join(', ');
     }
 }
 

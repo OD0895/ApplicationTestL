@@ -55,8 +55,27 @@ function todosApi(app){
 			}
 		}
 	);
-    
 
+	router.put(
+		'/:todoId',
+		async function (req, res, next) {
+			const { todoId } = req.params;
+			const { body: todo } = req;
+			try {
+				const updatedTodoId = await todoService.updateTodo({
+					todoId,
+					todo,
+				});
+
+				res.status(200).json({
+					data: updatedTodoId,
+					message: 'todo updated',
+				});
+			} catch (err) {
+				next(err);
+			}
+		}
+	);
 }
 
 module.exports = todosApi;

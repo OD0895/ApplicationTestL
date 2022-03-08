@@ -51,8 +51,6 @@ function applicationTestApi(app) {
             next(err);
         }
     });
-
-    
 }
 
 module.exports = applicationTestApi;
